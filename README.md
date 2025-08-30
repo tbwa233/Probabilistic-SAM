@@ -1,6 +1,6 @@
 # Probabilistic-SAM
 
-This repository contains the implementation of Probabilistic SAM.
+This repository contains the implementation of Probabilistic SAM. Our model learns a latent variable space that captures uncertainty and annotator variability in medical images. At inference, the model samples from this latent space, producing diverse masks that reflect the inherent ambiguity in medical image segmentation.
 
 ## Abstract
 
