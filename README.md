@@ -27,7 +27,7 @@ A brief summary of our results are shown below. Our Probabilistic SAM is compare
 We evaluate Probabilistic SAM on the task of lung nodule segmentation using the [LIDC-IDRI](https://pmc.ncbi.nlm.nih.gov/articles/PMC3041807/) dataset. This dataset contains thoracic CT scans along with ground truth annotations from four expert radiologists.
 
 ## Code
-The code has been written in Python using the Pytorch framework. Training requries a GPU. To train your own Probabilistic SAM, simply clone this repository and run train.py.
+The code has been written in Python using the Pytorch framework. Training requries a GPU. To train your own Probabilistic SAM, simply clone this repository and run main.py.
 
 ## Acknowledgements
 Thanks to [Stefan Knegt](https://github.com/stefanknegt) for open-sourcing his [Pytorch implementation of Probabilistic U-Net](https://github.com/stefanknegt/Probabilistic-Unet-Pytorch), which served as a helpful guide in the development of Probabilistic SAM, and for providing a link to [pre-processed LIDC-IDRI data](https://drive.google.com/drive/folders/1xKfKCQo8qa6SAr3u7qWNtQjIphIrvmd5).
