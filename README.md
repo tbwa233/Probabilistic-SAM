@@ -17,7 +17,7 @@ A prior network maps image embeddings to a Gaussian latent space, from which lat
 
 ## Results
 
-A brief summary of our results are shown below. Our Probabilistic SAM is compared to various baselines. In the table, the best scores are bolded and the second-best scores are underlined.
+A brief summary of our results are shown below. Our Probabilistic SAM is compared to various baselines. In the table, the best scores are bolded and the second-best scores are italicized.
 
 | Model              | GED (↓)   | DSC (↑)   | IoU (↑)   |
 |--------------------|-----------|-----------|-----------|
