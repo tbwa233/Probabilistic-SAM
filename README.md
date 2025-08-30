@@ -10,3 +10,7 @@ Recent advances in promptable segmentation, such as the Segment Anything Model (
 ![Figure](https://github.com/tbwa233/Probabilistic-SAM/blob/main/images/probsam_training.png)
 
 Given a CT slice and a bounding box prompt $(x_1, y_1), (x_2, y_2)$, visual and spatial information is encoded via SAM's image and prompt encoders. During training, a posterior network uses image embeddings and the ground truth mask to estimate $\mathcal{N}(\mu_{\text{post}}, \sigma_{\text{post}})$, while a prior network predicts $\mathcal{N}(\mu_{\text{prior}}, \sigma_{\text{prior}})$. A latent vector $z \sim \mathcal{N}(\mu_{\text{post}}, \sigma_{\text{post}})$ sampled from the posterior network is projected and added to the prompt embeddings before decoding. The model is optimized using a combination of binary cross-entropy (BCE), Dice loss, and Kullback–Leibler (KL) divergence between the posterior and prior distributions.
+
+![Figure](https://github.com/tbwa233/Probabilistic-SAM/blob/main/images/probsam_sampling.png)
+
+A prior network maps image embeddings to a Gaussian latent space, from which latent vectors $z_1, z_2, z_3, \dots$ are sampled. After projection through a multilayer perceptron (MLP), these vectors are added to the sparse prompt embeddings. The modified prompts and image embeddings are passed to SAM's lightweight mask decoder to generate diverse segmentation predictions.
