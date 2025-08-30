@@ -14,3 +14,14 @@ Given a CT slice and a bounding box prompt $(x_1, y_1), (x_2, y_2)$, visual and 
 ![Figure](https://github.com/tbwa233/Probabilistic-SAM/blob/main/images/probsam_sampling.png)
 
 A prior network maps image embeddings to a Gaussian latent space, from which latent vectors $z_1, z_2, z_3, \dots$ are sampled. After projection through a multilayer perceptron (MLP), these vectors are added to the sparse prompt embeddings. The modified prompts and image embeddings are passed to SAM's lightweight mask decoder to generate diverse segmentation predictions.
+
+## Results
+
+A brief summary of our results are shown below. Our Probabilistic SAM is compared to various baselines. In the table, the best scores are bolded and the second-best scores are underlined.
+
+| Model              | GED (↓)   | DSC (↑)   | IoU (↑)   |
+|--------------------|-----------|-----------|-----------|
+| Dropout U-Net      | 0.5156    | 0.5591    | 0.3880    |
+| Dropout SAM        | 0.5025    | _0.6799_  | 0.5150    |
+| Probabilistic U-Net| _0.3349_  | 0.5818    | _0.5557_  |
+| Probabilistic SAM  | **0.2910**| **0.8255**| **0.7849**|
